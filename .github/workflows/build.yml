@@ -1,0 +1,26 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build main.cpp
+        run: |
+          mkdir build
+          cl /EHsc main.cpp /Fe:build/main.exe
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-executable
+          path: build/main.exe
