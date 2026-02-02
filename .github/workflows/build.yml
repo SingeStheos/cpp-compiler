@@ -19,7 +19,7 @@ jobs:
       - name: Build main.cpp
         run: |
           mkdir build
-          cl /EHsc main.cpp /Fe:build/main.exe
+          cl /DUNICODE /D_UNICODE /EHsc main.cpp /Fe:build/main.exe
 
       - name: Upload executable
         uses: actions/upload-artifact@v4
