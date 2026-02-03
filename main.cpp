@@ -6,10 +6,10 @@
 // CONFIGURATION
 // =====================
 const int GRID_ROWS    = 20;
-const int GRID_COLS    = 20;
+const int GRID_COLS    = 12;
 const wchar_t* POP_TEXT = L"POP";
 
-const int CELL_SIZE = 30; // pixels per button
+const int CELL_SIZE = 16; // pixels per button
 // =====================
 
 HINSTANCE g_hInstance;
