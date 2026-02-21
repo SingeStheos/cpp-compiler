@@ -19,7 +19,7 @@ jobs:
       - name: Build main.cpp
         run: |
           mkdir build
-          cl /DUNICODE /D_UNICODE /EHsc main.cpp user32.lib /link /SUBSYSTEM:WINDOWS /OUT:build/main.exe
+          cl /DUNICODE /D_UNICODE /EHsc /Ilib\boost main.cpp user32.lib /link /SUBSYSTEM:WINDOWS /OUT:build/main.exe
       - name: Upload executable
         uses: actions/upload-artifact@v4
         with:
