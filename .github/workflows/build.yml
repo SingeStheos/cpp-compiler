@@ -15,6 +15,8 @@ jobs:
 
       - name: Setup MSVC
         uses: ilammy/msvc-dev-cmd@v1
+      - name: Debug directory
+        run: dir lib\boost\libs\multiprecision\include\boost\multiprecision
 
       - name: Build main.cpp
         run: |
