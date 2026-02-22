@@ -20,16 +20,6 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
       - name: Debug Boost presence
         run: |
-          Write-Host "===== ROOT ====="
-          Get-ChildItem -Recurse -Depth 3
-
-          Write-Host "===== lib folder ====="
-          if (Test-Path lib) {
-              Get-ChildItem lib -Recurse
-          } else {
-              Write-Host "lib folder does NOT exist"
-          }
-
           Write-Host "===== Folders containing .hpp files ====="
           Get-ChildItem -Recurse -Filter *.hpp | 
               Select-Object DirectoryName -Unique
